@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  movies:
+    image: vaheed9440/movies:latest
+    ports:
+      - "81:80"
+    deploy:
+      replicas: 3
+  train:
+    image:vaheed9440/train:latest
+    ports:
+      - "82:80"
+    deploy:
+      replicas: 3
+  dth:
+    image:  vaheed9440/dth:latest
+    ports:
+      - "83:80"
+    deploy:
+      replicas: 3
+  recharge:
+    image: vaheed9440/recharge:latest
+    ports:
+      - "84:80"
+    deploy:
+      replicas: 3
